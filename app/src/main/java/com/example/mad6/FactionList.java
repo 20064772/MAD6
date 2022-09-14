@@ -40,6 +40,7 @@ public class FactionList
         cv.put(TableSchema.MadSixSchema.Cols.NAME, newFaction.getName());
         cv.put(TableSchema.MadSixSchema.Cols.RELATIONSHIP, newFaction.getRelationship());
         cv.put(TableSchema.MadSixSchema.Cols.STRENGTH, newFaction.getStrength());
+        DB.insert(TableSchema.MadSixSchema.WorkSheet6, null, cv);
         return factions.size() - 1; // Return insertion point
     }
 
