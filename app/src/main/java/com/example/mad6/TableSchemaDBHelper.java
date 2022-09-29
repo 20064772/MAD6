@@ -15,13 +15,12 @@ public class TableSchemaDBHelper extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase DB) {
-        DB.execSQL("CREATE TABLE " + TableSchema.MadSixSchema.WorkSheet6 + "(" + TableSchema.MadSixSchema.Cols.ID + " INTEGER, " + TableSchema.MadSixSchema.Cols.NAME + "TEXT, " + TableSchema.MadSixSchema.Cols.STRENGTH + "INTEGER, " + TableSchema.MadSixSchema.Cols.RELATIONSHIP + "TEXT)");
+        DB.execSQL("CREATE TABLE " + TableSchema.MadSixSchema.WorkSheet6 + "(" + TableSchema.MadSixSchema.Cols.ID + " INTEGER, " + TableSchema.MadSixSchema.Cols.NAME + " TEXT, " + TableSchema.MadSixSchema.Cols.STRENGTH + " INTEGER, " + TableSchema.MadSixSchema.Cols.RELATIONSHIP + " TEXT)");
 
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase DB, int i, int i1) {
-
 
     }
 }

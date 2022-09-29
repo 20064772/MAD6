@@ -46,7 +46,13 @@ public class FactionList
 
     public void edit(Faction newFaction)
     {
-        // ...
+        ContentValues cv = new ContentValues();
+        cv.put(TableSchema.MadSixSchema.Cols.ID, newFaction.getId());
+        cv.put(TableSchema.MadSixSchema.Cols.NAME, newFaction.getName());
+        cv.put(TableSchema.MadSixSchema.Cols.RELATIONSHIP, newFaction.getRelationship());
+        cv.put(TableSchema.MadSixSchema.Cols.STRENGTH, newFaction.getStrength());
+        String[] whereValue = {String.valueOf(newFaction.getId())};
+        DB.update(TableSchema.MadSixSchema.WorkSheet6, cv, TableSchema.MadSixSchema.Cols.ID + "= ?", whereValue);
     }
 
     public void remove(Faction rmFaction)
